@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    article div{
+        width: 320px;
+        padding: 10px;
+        margin: 10px;
+        margin-left: 20px;
+        text-align: left;
+        float: left;
+        background-color: rgb(0, 0, 0);
+        color: black;
+        font-weight: bold;
+        min-height: 100px;
+        margin-bottom: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+    }
+    
+    </style>
+</head>
+
+<body style="background-color: rgba(255, 241, 251, 0.788);">
+    <div style="margin: 0 auto ;margin-top: 20px;">
+        <form
+            style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Courier, monospace;
+      background-color: rgb(195, 234, 236); width: 500px; padding: 20px; text-align: center; margin: 0 auto;">
+            <span
+                style="font-size: 20px ;font-weight: bold; color: rgb(83, 154, 158);">
+                Type your text:</span><br>
+            <input style="margin-top: 20px;" size="60" type="text/csv"
+                id="string" value="">
+            <input type="reset"
+                style="color: crimson; font-weight: bold;"><br><br>
+        </form>
+    </div>
+    <br>
+    <div style="text-align: center;"><button
+    onclick="mainFunction()"><span style="margin: 50px ;color: rgb(70, 204, 66) ;font-size: 20px;">Proceed!</span></button>
+    </div>
+    <div style="width: 500px; margin: 0 auto; text-align: center;">
+        <p style="margin-top: 30px;;font-size: 18px;font-family: Arial, Helvetica, sans-serif;">
+            <strong>Result:</strong></p>
+            <p id="result"></p>
+    </div>
+    
+    <article style="width:1200px; margin: 0 auto;"> <!-- SECTION OF RESULTS -->
+        <div style="width: 1px; height: 600px; padding: 0px; margin: 0px;"></div>
+        <div style="background-color: rgb(240, 54, 91); margin-left: 60px;">
+            <p> IRs with Expired Target Dates (or will be expired this week): <br><hr> </p>
+            <p id="red"></p>
+        </div>
+        <div style="background-color: rgb(245, 245, 80);">
+            <p> IRs with Target date between 8 to 20 days - 2&nbspweeks in advance:<hr></p>
+            <p id="yellow"></p>
+        </div>
+        <div style="background-color: rgb(72, 235, 72);">
+            <p>IRs with Target date greater than 2weeks: <br><br><hr></p>
+            <p id="green"></p>
+        </div>
+    </article>
+    
+    <div style=" text-align: center; border: rgba(74, 236, 209, 0.76) solid;  float: left; width: 1075px; margin-left: 60px;"> <!--width: 1100px;-->
+        <h2 style="font-size: 16px;">
+            How to use this tool:
+        </h2>
+        <p style="font-size: 12px; color: rgb(28, 163, 152);">
+            Search IRs on DSxR&D Authoring with filter on IR family owner = <strong>g6c, g4k, jrz2, two1, kwa3, mwi5, iwk2, bza3</strong> <br>
+            In field State select all values from 1 to 5. <br>
+            Make Search, and then click on Tool icon to Export your search. <br>
+            Open downloaded .csv file in text editor (like f.e. Notepad++)<br>
+            Copy text from word "Incident" to the last word (without last comma)<br>
+            Paste text to Textbox on this site and click Proceed.
+        </p>
+    </div>
+    <script src="Untitled-11v2.js"></script>
+</body>
+
+</html>
